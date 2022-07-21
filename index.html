@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    <style type="stylesheet" href="metro.css"></style>
+    <link rel="stylesheet" href="metro.css" ></link>
+</head>
+<body class="body">
+    <div id="container">
+  <h2>Welcome to Delhi Metro </h2> 
+  <br>
+  <br>
+  <label for="Source">Source Station:</label>
+  <select name="Boxes" id="Source">
+  <option value="" disabled selected hidden>select option</option></select>
+  <br>
+  <br>
+  <label for="Destination">Destination Station:</label>
+  <select name="Boxes" id="Destination">
+    <option value="" disabled selected hidden>select option</option>
+  </select>
+    
+    <br>
+    <br>
+    <label for="Boxes">Payment Method:</label>
+    <select name="Boxes" id="Boxes">
+        <option value="" disabled selected hidden>select option</option>
+        <option value="Card payment">Card payment</option>
+        <option value="Token">Token</option>
+    </select>
+<br>
+<br>
+
+    <label for="Boxes">Fare:-</label>
+
+    <div class="Fare">
+        <form action="">
+            <input type="Number" id="totalfare">
+        </form>
+    </div>
+    <br>
+    
+    <div class="Calculate fare">
+        <button class="Calculate fare" onclick="fareCalculation()">Calculate fare</button>      
+        <button class="Reset">Reset</button>
+        
+    </div>
+    <br>
+    </div>
+    <script src="metro.js"></script>
+</body>
+<br>
+<br>
+<p>Thanks for visit</p>
+</html>
+
+      
