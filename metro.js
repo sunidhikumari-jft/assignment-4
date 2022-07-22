@@ -40,52 +40,52 @@ selectOption();
 	// for(let i=0; i<arr.length; i++)
 	// {
 		// station.push[i];
-		// let cardpayment=false;
+		
 		
 		// let source= 6;
 		// let destination=8;
-		// let sC=destination-source;//sC=station covered
-		let fare=0;
-		if(snumber>0 && snumber<=4)
-		{
-			fare=10;
-		}
-		 else if(snumber>4 && snumber<=8)
-		{
-			fare=20;
-		}
-		else if(snumber>8 && snumber<=12)
-		{
-			fare=30;
-		}
-		else if(snumber>12 && snumber<=16)
-		{
-			fare=40;
-		}
-		else if(snumber>16 && snumber<=20)
-		{
-			fare=50;
-		}
-		else if(snumber>20 && snumber<=24)
-		{
-			fare=60;
-		}
-		else if(snumber>24)
-		{
-			fare=70;
-		}
-		// if(cardpayment)
+		let fare;
+		
+		// if(snumber>0 && snumber<=4)
 		// {
-		// 	fare=fare*10/100;
+		// 	fare=10;
 		// }
+		//  else if(snumber>4 && snumber<=8)
+		// {
+		// 	fare=20;
+		// }
+		// else if(snumber>8 && snumber<=12)
+		// {
+		// 	fare=30;
+		// }
+		// else if(snumber>12 && snumber<=16)
+		// {
+		// 	fare=40;
+		// }
+		// else if(snumber>16 && snumber<=20)
+		// {
+		// 	fare=50;
+		// }
+		// else if(snumber>20 && snumber<=24)
+		// {
+		// 	fare=60;
+		// }
+		// else if(snumber>24)
+		// {
+		// 	fare=70;
+		// }
+		fare=(Math.floor(snumber/4)+1)*10;
+		
+		
 		if(document.getElementById('Boxes').value==='Card payment' && snumber>=5){
 			fare=fare-(10/100*fare);
 		}
-	
-	console.log(fare);
+
             
 			document.getElementById('totalfare').value=fare;
     
 	}
 
  fareCalculation();
+
+
