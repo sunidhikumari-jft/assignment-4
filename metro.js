@@ -1,29 +1,14 @@
-// var a, b;
 
 function selectOption()
 {
-    let arr=['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+    let arr=['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'PQ', 'UT'];
     for(let i=0; i<arr.length; i++)
     {
-        document.getElementById('Source').innerHTML+=`<option value=${i+1}>${arr[i]}</option>`
+        document.getElementById('Source').innerHTML+=`<option value=${i+i}>${arr[i]}</option>`
         document.getElementById('Destination').innerHTML+=`<option value=${i+1}>${arr[i]}</option>`
     }
 }
 selectOption();
-// function fun(data)
-// {
-//   a=arr[data];
-//   console.log(a);
-// }
-// function done(data)
-// {
-// 	b=arr[data];
-// 	console.log(b);
-// }
-
-
-
-
 
  function fareCalculation()
  {
@@ -33,17 +18,7 @@ selectOption();
 	let snumber=(Math.abs(Number(x-y)));
 
 	console.log(snumber)
-    // let arr=['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-    // let station=[];
 
-
-	// for(let i=0; i<arr.length; i++)
-	// {
-		// station.push[i];
-		
-		
-		// let source= 6;
-		// let destination=8;
 		let fare;
 		
 		// if(snumber>0 && snumber<=4)
@@ -74,14 +49,31 @@ selectOption();
 		// {
 		// 	fare=70;
 		// }
+		if(snumber%4==0 )
+		{
+			fare=(Math.floor(snumber/4))*10;
+		}
+		else{
 		fare=(Math.floor(snumber/4)+1)*10;
+
+		}
 		
+		if(snumber>24) 
+		{
+			fare=60;
+		}
+		console.log(fare);
 		
 		if(document.getElementById('Boxes').value==='Card payment' && snumber>=5){
 			fare=fare-(10/100*fare);
 		}
+		if(snumber<1)
+		{
+			fare=10;
+		}
+		
 
-            
+        
 			document.getElementById('totalfare').value=fare;
     
 	}
